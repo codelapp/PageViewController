@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Paginacion View Controller-->
+        <scene sceneID="Bgr-yz-jvw">
+            <objects>
+                <pageViewController storyboardIdentifier="tutorial" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Evk-33-y7j" customClass="PaginacionViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOP-1y-qnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="61"/>
+        </scene>
+        <!--Tutorial View Controller-->
+        <scene sceneID="ip5-K2-okO">
+            <objects>
+                <viewController storyboardIdentifier="tutorialHijo" id="vUz-bX-Lla" customClass="TutorialViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jpj-Ll-loa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITULO TUTORIAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-Di-a3n">
+                                <rect key="frame" x="16" y="58" width="343" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="DESCRIPCION DEL PASO DEL TUTORIAL" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="opm-pv-6Qa">
+                                <rect key="frame" x="16" y="162" width="343" height="221"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="r6B-TL-Eb6">
+                                <rect key="frame" x="102" y="565" width="171" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrd-Dw-SBm">
+                                <rect key="frame" x="159" y="610" width="57" height="30"/>
+                                <state key="normal" title="Finalizar"/>
+                                <connections>
+                                    <action selector="finalizar:" destination="vUz-bX-Lla" eventType="touchUpInside" id="wh0-jW-edY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYM-IJ-xyF">
+                                <rect key="frame" x="21" y="509" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Atras"/>
+                                <connections>
+                                    <action selector="atras:" destination="vUz-bX-Lla" eventType="touchUpInside" id="pIF-r7-U6K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEz-jI-7Qt">
+                                <rect key="frame" x="295" y="509" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <action selector="siguiente:" destination="vUz-bX-Lla" eventType="touchUpInside" id="OQ9-Xv-c3j"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0rb-Di-a3n" firstAttribute="top" secondItem="fJd-rm-z5c" secondAttribute="top" constant="38" id="96L-in-xQq"/>
+                            <constraint firstItem="0rb-Di-a3n" firstAttribute="leading" secondItem="fJd-rm-z5c" secondAttribute="leading" constant="16" id="98z-PP-w7B"/>
+                            <constraint firstItem="Wrd-Dw-SBm" firstAttribute="leading" secondItem="fJd-rm-z5c" secondAttribute="leading" constant="159" id="G1M-3I-9sk"/>
+                            <constraint firstItem="fJd-rm-z5c" firstAttribute="bottom" secondItem="r6B-TL-Eb6" secondAttribute="bottom" constant="65" id="H7G-eR-uqZ"/>
+                            <constraint firstItem="r6B-TL-Eb6" firstAttribute="leading" secondItem="fJd-rm-z5c" secondAttribute="leading" constant="102" id="JPX-70-DWL"/>
+                            <constraint firstItem="fJd-rm-z5c" firstAttribute="trailing" secondItem="opm-pv-6Qa" secondAttribute="trailing" constant="16" id="VZg-Hp-cC9"/>
+                            <constraint firstItem="opm-pv-6Qa" firstAttribute="top" secondItem="0rb-Di-a3n" secondAttribute="bottom" constant="55" id="XeD-GQ-tPg"/>
+                            <constraint firstItem="opm-pv-6Qa" firstAttribute="leading" secondItem="fJd-rm-z5c" secondAttribute="leading" constant="16" id="YBH-ir-JYY"/>
+                            <constraint firstItem="r6B-TL-Eb6" firstAttribute="top" secondItem="opm-pv-6Qa" secondAttribute="bottom" constant="182" id="hNm-eW-3OA"/>
+                            <constraint firstItem="fJd-rm-z5c" firstAttribute="trailing" secondItem="Wrd-Dw-SBm" secondAttribute="trailing" constant="159" id="ldN-KE-vJo"/>
+                            <constraint firstItem="fJd-rm-z5c" firstAttribute="bottom" secondItem="Wrd-Dw-SBm" secondAttribute="bottom" constant="27" id="qV9-Le-gES"/>
+                            <constraint firstItem="opm-pv-6Qa" firstAttribute="top" secondItem="0rb-Di-a3n" secondAttribute="bottom" constant="55" id="sRm-qo-HYh"/>
+                            <constraint firstItem="fJd-rm-z5c" firstAttribute="trailing" secondItem="r6B-TL-Eb6" secondAttribute="trailing" constant="102" id="v85-u5-mTi"/>
+                            <constraint firstItem="fJd-rm-z5c" firstAttribute="bottom" secondItem="opm-pv-6Qa" secondAttribute="bottom" constant="284" id="vJ9-n0-42g"/>
+                            <constraint firstItem="fJd-rm-z5c" firstAttribute="trailing" secondItem="0rb-Di-a3n" secondAttribute="trailing" constant="16" id="wIp-as-ing"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fJd-rm-z5c"/>
+                    </view>
+                    <connections>
+                        <outlet property="botonAtras" destination="sYM-IJ-xyF" id="6rd-L2-tqQ"/>
+                        <outlet property="botonFinalizar" destination="Wrd-Dw-SBm" id="PCr-JL-fDw"/>
+                        <outlet property="botonSiguiente" destination="FEz-jI-7Qt" id="SrX-UJ-Avt"/>
+                        <outlet property="contenido" destination="opm-pv-6Qa" id="BQX-4k-ve1"/>
+                        <outlet property="control" destination="r6B-TL-Eb6" id="Mit-qE-4zx"/>
+                        <outlet property="titulo" destination="0rb-Di-a3n" id="ko6-DM-CM7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWz-WN-ZIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458.39999999999998" y="713.79310344827593"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383" y="61"/>
+        </scene>
+    </scenes>
+</document>
